@@ -2,8 +2,8 @@ import fs from 'fs';
 
 export function readDB() {
   const str = fs.readFileSync("db/chatroom.json", { encoding: "utf-8" });
-  const todolist = JSON.parse(str);
-  return todolist;
+  const chatroom = JSON.parse(str);
+  return chatroom;
 }
 
 export function writeDB(chatroom) {

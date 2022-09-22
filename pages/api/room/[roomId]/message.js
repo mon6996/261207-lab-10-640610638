@@ -23,8 +23,6 @@ export default function roomIdMessageRoute(req, res)
 		if (typeof req.body.text !== "string" || req.body.text.length === 0)
 			return res.status(404).json({ ok: false, message: "Invalid text input" });
 		
-		const text = req.body.text;
-		const newId = uuidv4();
 		const newMessage = {
 			messageId: uuidv4(),
 			text: req.body.text,
